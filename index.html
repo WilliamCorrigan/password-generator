@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <h4>Select a password length between 8 and 128 and then select the character sets to generate a password</h2>
+        <P></P>
+        <div id="length">Length:
+          <input type="number" id="lengthOfPassword">
+        </div>
+        <P></P>
+        <div>
+          Character Sets:
+          <ul>
+            <li>
+              <input type="checkbox" id="specialChars">Special Characters:
+            </li>
+            <li>
+              <input type="checkbox" id="numericChars">Numeric Characters:
+            </li>
+            <li>
+              <input type="checkbox" id="lowercaseChars">Lowercase Characters:
+            </li>
+            <li>
+              <input type="checkbox" id="uppercaseChars">Uppercase Characters:
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-body">
+          Password Text:
+          <textarea readonly id="password" placeholder="Your Secure Password"
+            aria-label="Generated Password"></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generateBtn" class="btn">Generate Password</button>
+          <button disabled id="copyBtn" class="btn float-right">
+            Copy to Clipboard
+          </button>
+        </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
